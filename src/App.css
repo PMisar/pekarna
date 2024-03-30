@@ -1,0 +1,8 @@
+body {
+    background-image: url('/pozadi.jpg');
+    background-size: cover;
+    background-position: center;
+    /* margin: 0;
+    padding: 0; 
+    font-family: Arial, sans-serif; */
+}
