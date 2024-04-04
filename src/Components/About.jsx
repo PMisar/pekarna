@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="about-container" id="about">
       <h2>O nás</h2>
-      <div className="first-row">
+      <div className="first-part">
         <p className="about-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           elementum, felis a ultricies ultricies, tellus augue efficitur ligula,
@@ -15,10 +15,10 @@ const About = () => {
           In ac blandit lorem. Sed non imperdiet est. In vestibulum ligula sed
           purus convallis condimentum.
         </p>
-        <img src="/src/assets/about-image.jpg" alt="First Image" />
+        <img src="/src/assets/about-image.jpg" alt="Holding Dough Image" />
       </div>
-      <div className="second-row">
-        <img src="/src/assets/about-image2.jpg" alt="Second Image" />
+      <div className="second-part">
+        <img src="/src/assets/about-image2.jpg" alt="Falling Flour Image" />
         <div className="background-rectangle">
           <p className="about-text">
             Mauris convallis lacus ut arcu pellentesque, eget pellentesque

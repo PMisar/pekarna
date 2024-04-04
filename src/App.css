@@ -14,6 +14,8 @@ body {
   z-index: 2;
   right: 20px;
   top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navbar button {
@@ -24,6 +26,41 @@ body {
   padding: 20px;
   font-family: "Akaya Kanadaka", system-ui;
   font-size: 20px;
+}
+
+.dropdown-button {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+  z-index: 2;
+}
+
+.dropdown-content button {
+  padding: 12px 16px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar button:not(:last-child) {
+    display: none;
+  }
+
+  .dropdown-button {
+    display: block;
+  }
+
+  .dropdown-content {
+    display: block;
+  }
 }
 
 /* HEADER */
@@ -94,24 +131,20 @@ body {
   padding: 10%;
 }
 
-.first-row {
+.first-part {
   display: flex;
   align-items: center;
 }
 
-.first-row img {
+.first-part img,
+.second-part img {
   max-height: 500px;
 }
 
-.second-row {
+.second-part {
   display: flex;
   justify-content: flex-end;
-  /* height: 500px; */
   align-items: center;
-}
-
-.second-row img {
-  max-height: 500px;
 }
 
 .background-rectangle {
@@ -195,17 +228,126 @@ body {
 
 /* JOB OFFER */
 .job-offer-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   color: white;
 }
 
+.job-offer-container h2 {
+  font-family: "Akaya Kanadaka", system-ui;
+  font-weight: 400;
+  font-size: 30px;
+}
+
 .color-background {
   background-color: #e95656;
+  padding: 20px;
+}
+
+.job-offer-text {
+  text-align: center;
+  font-size: larger;
+}
+
+.job-offer-text2 {
+  padding: 5%;
+  font-size: 18px;
+}
+
+.job-offer-part2 {
+  display: flex;
+}
+
+.job-offer-part2 img {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .job-offer-part2 {
+    flex-direction: column;
+  }
+  .right-image {
+    margin-top: 20px;
+  }
+}
+
+/* CONTACT */
+.contact-boxes {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+}
+
+.contact-container h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Akaya Kanadaka", system-ui;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.left-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-box p,
+h3 {
+  padding-left: 10%;
+  font-size: 18px;
+}
+
+.right-box {
+  flex: 1;
+  background-color: #e95656;
+  padding: 20px;
+}
+
+.right-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-box form div {
+  margin-bottom: 10px;
+}
+
+.right-box form input,
+.right-box form textarea,
+.right-box form button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.right-box form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.iframe-style {
+  border: 0;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
 }
 
 /* FOOTER */

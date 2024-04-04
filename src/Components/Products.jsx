@@ -36,16 +36,13 @@ const Products = () => {
         <p>*Klikni na obrázek pro více informací</p>
       </div>
       <div className="boxes-container">
-        <div className="box" onClick={() => handleBoxClick('Croissant')}>Croissant</div>
-        <div className="box" onClick={() => handleBoxClick('Baguette')}>Baguette</div>
-        <div className="box" onClick={() => handleBoxClick('Sourdough Bread')}>Sourdough Bread</div>
-        <div className="box" onClick={() => handleBoxClick('Sourdough Bread')}>Sourdough Bread</div>
-        <div className="box" onClick={() => handleBoxClick('Sourdough Bread')}>Sourdough Bread</div>
-        <div className="box" onClick={() => handleBoxClick('Sourdough Bread')}>Sourdough Bread</div>
-        <div className="box" onClick={() => handleBoxClick('Sourdough Bread')}>Sourdough Bread</div>
-        <div className="box" onClick={() => handleBoxClick('Sourdough Bread')}>Sourdough Bread</div>
-        <div className="box" onClick={() => handleBoxClick('Sourdough Bread')}>Sourdough Bread</div>
-        {/* Add more boxes with different bakery products */}
+        <div className="box" onClick={() => handleBoxClick('Chléb velký')}>Chléb velký</div>
+        <div className="box" onClick={() => handleBoxClick('Chléb malý')}>Chléb malý</div>
+        <div className="box" onClick={() => handleBoxClick('Houska obyčejná')}>Houska obyčejná</div>
+        <div className="box" onClick={() => handleBoxClick('Houska cereální')}>Houska cereální</div>
+        <div className="box" onClick={() => handleBoxClick('Dalamánek')}>Dalamánek</div>
+        <div className="box" onClick={() => handleBoxClick('Vánočka')}>Vánočka</div>
+        <div className="box" onClick={() => handleBoxClick('Koláč')}>Koláč</div>
       </div>
       {showModal && <Modal onClose={handleCloseModal} productName={selectedProduct} />}
     </div>

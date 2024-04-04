@@ -1,10 +1,8 @@
-// src/assets
-// import { useState } from 'react'
 import Header from "./Components/Header";
 import About from "./Components/About";
 import History from "./Components/History";
 import Products from "./Components/Products";
-import Work from "./Components/JobOffer";
+import JobOffer from "./Components/JobOffer";
 import Retailers from "./Components/Retailers";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
@@ -17,7 +15,7 @@ function App() {
       <About />
       <History />
       <Products />
-      <Work />
+      <JobOffer />
       <Retailers />
       <Contact />
       <Footer />
