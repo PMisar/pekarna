@@ -1,9 +1,8 @@
 /* font-family: "Akaya Kanadaka", system-ui; */
 
 body {
-  /* background-image: url("./assets/pozadi.jpg"); */
-  background-color: black;
-  background-size: cover;
+  background-image: url("./assets/pozadi.jpg");
+  background-size: contain;
   background-position: center;
   margin: 0;
   padding: 0;
@@ -15,8 +14,6 @@ body {
   z-index: 2;
   right: 20px;
   top: 20px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .navbar button {
@@ -27,32 +24,7 @@ body {
   padding: 20px;
   font-family: "Akaya Kanadaka", system-ui;
   font-size: 20px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
- 
-.dropdown-content button {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content button:hover {
-  background-color: #ddd;
-} 
-
-.navbar:hover .dropdown-content {
-  display: block;
+  margin: 5px;
 }
 
 .dropdown-button,
@@ -60,27 +32,60 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1400px) {
+  .navbar-links-container button:not(.dropdown-button) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .navbar-links-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .navbar-links-container button:not(.dropdown-button) {
     display: none;
   }
 
   .dropdown-button {
-    display: block; 
+    display: block;
+  }
+
+  .navbar:hover .dropdown-content {
+    display: block;
   }
 
   .dropdown-content {
     position: absolute;
-    background-color: transparent;
-    top: auto;
-    right: 40px;
-    top: 20px;
-    left: auto; 
+    top: 60px;
+    right: -40px;
     display: none;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+  }
+
+  .dropdown-content button {
+    color: black;
+    text-decoration: none;
+    width: 100vw;
+
+    display: block;
+  }
+
+  .dropdown-button:hover {
+    background-color: #e95656;
+  }
+
+  .dropdown-content button:hover {
+    background-color: #e95656;
+    width: 100vw;
   }
 }
 
@@ -100,7 +105,7 @@ body {
 .home-bannerImage-container::before {
   content: "";
   position: absolute;
-  width: 45%;
+  width: 50%;
   height: 350px;
   background-color: #e95656;
   z-index: 1;
@@ -152,7 +157,8 @@ body {
   padding: 10%;
 }
 
-.first-part {
+.first-part,
+.second-part {
   display: flex;
   align-items: center;
 }
@@ -160,12 +166,6 @@ body {
 .first-part img,
 .second-part img {
   max-height: 500px;
-}
-
-.second-part {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .background-rectangle {
@@ -178,6 +178,33 @@ body {
 }
 
 /* HISTORY */
+.history-container {
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.history-content {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.history-text1,
+.history-text2 {
+  flex: 1; 
+}
+
+.history-image {
+  flex: 0 0 300px; 
+  margin: 0 20px 20px 0;
+}
+
+.history-image img {
+  width: 100%; 
+}
+
+
 
 /* PRODUCTS */
 .products-container {
@@ -190,7 +217,8 @@ body {
   color: white;
 }
 
-.products-container h2 {
+.products-container h2,
+.job-offer-container h2 {
   font-family: "Akaya Kanadaka", system-ui;
   font-weight: 400;
   font-size: 30px;
@@ -254,12 +282,6 @@ body {
   color: white;
 }
 
-.job-offer-container h2 {
-  font-family: "Akaya Kanadaka", system-ui;
-  font-weight: 400;
-  font-size: 30px;
-}
-
 .color-background {
   background-color: #e95656;
   padding: 20px;
@@ -270,9 +292,14 @@ body {
   font-size: larger;
 }
 
+.job-offer-text p {
+  padding: 0 10%;
+
+}
+
 .job-offer-text2 {
-  padding: 5%;
   font-size: 18px;
+  padding: 0 10%;
 }
 
 .job-offer-part2 {
@@ -294,16 +321,29 @@ body {
   }
 }
 
+/* RETAILERS */
+.retailers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+}
+
+.retailers-container iframe{
+  width: 100%;
+}
+
 /* CONTACT */
 .contact-boxes {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   width: 100%;
-  justify-content: space-between;
   color: white;
 }
 
+.retailers-container h2,
+.history-container h2,
 .contact-container h2 {
   display: flex;
   justify-content: center;
@@ -319,8 +359,8 @@ body {
 }
 
 .left-box p,
-h3 {
-  padding-left: 10%;
+.left-box h3 {
+  padding: 0 10%;
   font-size: 18px;
 }
 
@@ -336,7 +376,7 @@ h3 {
 }
 
 .right-box form div {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .right-box form input,
@@ -357,34 +397,48 @@ h3 {
   cursor: pointer;
 }
 
+.right-box h2 {
+  margin: 0;
+  padding: 0;
+}
+
 .iframe-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .iframe-style {
-  border: 0;
-  width: 100%;
   max-width: 1200px;
+  width: 100%;
   height: 400px;
+  border: 0;
 }
 
 /* FOOTER */
 .footer-container {
   color: white;
-  line-height: 0.8;
-  padding-left: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .footer-container button {
   background-color: Transparent;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  overflow: hidden;
   color: white;
   font-size: 15px;
   font-weight: bold;
+}
+
+.footer-container button:hover {
+  transform: scale(1.02);
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
