@@ -6,7 +6,8 @@ const History = () => {
     <div className="history-container">
       <h2>Historie</h2>
       <div className="history-content">
-        <div className="history-text1">
+        <div className="history-text">
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
             elementum, felis a ultricies ultricies, tellus augue efficitur
@@ -32,11 +33,11 @@ const History = () => {
             varius, non molestie velit bibendum. In ac blandit lorem. Sed non
             imperdiet est. In vestibulum ligula sed purus convallis condimentum.
           </p>
-        </div>
-        <div className="history-image">
+          {/* </div> */}
+          {/* <div className="history-image">
           <img src={HistoryImage} alt="History Image" />
-        </div>
-        <div className="history-text2">
+        </div> */}
+          {/* <div className="history-text"> */}
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
             elementum, felis a ultricies ultricies, tellus augue efficitur
