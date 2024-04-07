@@ -47,7 +47,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .navbar-links-container button:not(.dropdown-button) {
     display: none;
   }
@@ -65,18 +65,20 @@ body {
     top: 60px;
     right: -40px;
     display: none;
-    background-color: #f9f9f9;
+    background-color: rgb(214, 43, 43);
     width: 100vw;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
+
   }
 
   .dropdown-content button {
     color: black;
     text-decoration: none;
     width: 100vw;
-
     display: block;
+    border-bottom: 1px solid white;
+
   }
 
   .dropdown-button:hover {
@@ -178,29 +180,6 @@ body {
 }
 
 /* HISTORY */
-/* .history-container {
-  color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 18px;
-  text-align: justify;
-}
-
-.history-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.history-text {
-  width: 100%;
-}
-
-.history-image img {
-  width: 300px;
-  height: 250px;
-} */
-
 .history-container {
   max-width: 1200px;
   margin: 30px auto;
@@ -259,10 +238,40 @@ body {
   box-sizing: border-box;
 }
 
-.history-image img {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
+/* HISTORIE 2 VERZE */
+.history-container2 {
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.history-content2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: stretch; */
+}
+
+.history-image2 img {
+  width: 350px;
+  float: right;
+  margin: 20px 0 20px 20px;
+}
+
+.right-column {
+  border-left: 1px solid white;
+  width: calc(33.33% - 0.5px);
+}
+
+.left-column {
+  width: calc(66.67% - 0.5px);
+}
+
+.left-column,
+.right-column {
+  padding: 0 20px;
 }
 
 /* PRODUCTS */
@@ -400,6 +409,7 @@ body {
   color: white;
 }
 
+.history-container2 h2,
 .retailers-container h2,
 .history-container h2,
 .contact-container h2 {
@@ -419,7 +429,7 @@ body {
 .left-box p,
 .left-box h3 {
   padding: 0 10%;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .right-box {
