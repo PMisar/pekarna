@@ -94,12 +94,7 @@ const History = () => {
               ligula, eget ornare tellus odio vel velit. Mauris vel scelerisque
               ante. Ut vitae felis dapibus, hendrerit lectus id, auctor urna.
               Curabitur ex mauris, sagittis in turpis sit amet, ultricies
-              imperdiet felis. Praesent tempus neque vitae erat varius, non
-              molestie velit bibendum. In ac blandit lorem. Sed non imperdiet
-              est. In vestibulum ligula sed purus convallis condimentum. Proin
-              elementum, felis a ultricies ultricies, tellus augue efficitur
-              ligula, eget ornare tellus odio vel velit. Mauris vel scelerisque
-              ante.
+              imperdiet felis.
             </p>
           </div>
 
@@ -119,9 +114,7 @@ const History = () => {
               ante. Ut vitae felis dapibus, hendrerit lectus id, auctor urna.
               Curabitur ex mauris, sagittis in turpis sit amet, ultricies
               imperdiet felis. Praesent tempus neque vitae erat varius, non
-              molestie velit bibendum. In ac blandit lorem. Sed non imperdiet
-              est. In vestibulum ligula sed purus convallis condimentum.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.
+              molestie velit bibendum. 
             </p>
           </div>
         </div>

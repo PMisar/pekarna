@@ -6,6 +6,7 @@ body {
   background-position: center;
   margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 
 /* NAVBAR */
@@ -13,7 +14,6 @@ body {
   position: absolute;
   z-index: 2;
   right: 20px;
-  top: 20px;
 }
 
 .navbar button {
@@ -32,31 +32,13 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 1400px) {
-  .navbar-links-container button:not(.dropdown-button) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .navbar-links-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
-  }
-}
-
 @media only screen and (max-width: 900px) {
   .navbar-links-container button:not(.dropdown-button) {
     display: none;
   }
 
+  .navbar:hover .dropdown-content,
   .dropdown-button {
-    display: block;
-  }
-
-  .navbar:hover .dropdown-content {
     display: block;
   }
 
@@ -64,44 +46,33 @@ body {
     position: absolute;
     top: 60px;
     right: -40px;
-    display: none;
-    background-color: rgb(214, 43, 43);
-    width: 100vw;
+    background-color: rgb(124, 114, 114);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-
   }
 
   .dropdown-content button {
-    color: black;
     text-decoration: none;
     width: 100vw;
-    display: block;
     border-bottom: 1px solid white;
-
   }
 
-  .dropdown-button:hover {
-    background-color: #e95656;
-  }
-
+  .dropdown-button:hover,
   .dropdown-content button:hover {
     background-color: #e95656;
-    width: 100vw;
   }
 }
 
 /* HEADER */
 .home-bannerImage-container {
   position: relative;
+  color: white;
 }
 
 .home-bannerImage-container img {
   width: 100%;
-  max-width: 100vw;
   height: 300px;
   object-fit: cover;
-  object-position: center;
 }
 
 .home-bannerImage-container::before {
@@ -119,21 +90,17 @@ body {
   top: 55%;
   left: 20%;
   transform: translate(-50%, -50%);
-  color: white;
   font-family: "Parisienne", cursive;
-  font-style: normal;
   z-index: 1;
 }
 
 .large-text {
   font-size: 70px;
-  font-weight: 500;
   line-height: 0.8;
 }
 
 .small-text {
   font-size: 38px;
-  font-weight: 400;
 }
 
 /* ABOUT */
@@ -155,8 +122,8 @@ body {
 }
 
 .about-text {
-  font-size: 20px;
   padding: 10%;
+  text-align: justify;
 }
 
 .first-part,
@@ -173,9 +140,7 @@ body {
 .background-rectangle {
   background-color: #e95656;
   height: 500px;
-  text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -200,9 +165,6 @@ body {
   vertical-align: top;
   font-size: initial;
   text-align: justify;
-}
-
-.history-text p {
   font-size: 20px;
 }
 
@@ -213,12 +175,10 @@ body {
   padding: var(--m) 0 var(--m) var(--m);
   margin-top: var(--t);
   background: var(--img) content-box;
-  background-size: 200% 100%;
   shape-outside: circle(
     var(--R) at var(--d, right) calc(-1 * var(--m)) top calc(50% + var(--t) / 2)
   );
   float: right;
-  border-radius: 500px 0 0 500px;
   margin-right: calc(-1 * var(--m));
 }
 
@@ -243,15 +203,12 @@ body {
   color: white;
   max-width: 1200px;
   margin: 0 auto;
-  font-size: 18px;
   text-align: justify;
 }
 
 .history-content2 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  /* align-items: stretch; */
 }
 
 .history-image2 img {
@@ -271,7 +228,7 @@ body {
 
 .left-column,
 .right-column {
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 /* PRODUCTS */
@@ -279,22 +236,18 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   color: white;
+  text-align: center;
 }
 
 .products-container h2,
 .job-offer-container h2 {
   font-family: "Akaya Kanadaka", system-ui;
+
   font-weight: 400;
   font-size: 30px;
-}
-
-.centered-content {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 /* Modal */
@@ -311,9 +264,10 @@ body {
 }
 
 .modal-content {
-  background-color: gray;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 5px;
+  max-width: 70vw;
   position: relative;
 }
 
@@ -357,7 +311,6 @@ body {
 
 .job-offer-text {
   text-align: center;
-  font-size: larger;
 }
 
 .job-offer-text p {
@@ -365,7 +318,6 @@ body {
 }
 
 .job-offer-text2 {
-  font-size: 18px;
   padding: 0 10%;
 }
 
@@ -373,8 +325,13 @@ body {
   display: flex;
 }
 
+.job-offer-text2 a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
 .job-offer-part2 img {
-  display: block;
   width: 300px;
   margin: 0 auto;
 }
@@ -465,6 +422,10 @@ body {
   cursor: pointer;
 }
 
+.right-box form button:hover {
+  transform: scale(1.02);
+}
+
 .right-box h2 {
   margin: 0;
   padding: 0;
@@ -473,7 +434,6 @@ body {
 .iframe-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .iframe-style {
@@ -485,26 +445,31 @@ body {
 
 /* FOOTER */
 .footer-container {
-  color: white;
-  padding: 10px;
+  color: #ffffff;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
 }
 
+.footer-container p,
 .footer-container button {
-  background-color: Transparent;
+  font-size: 18px;
+}
+
+.footer-container button {
+  background-color: transparent;
   border: none;
-  cursor: pointer;
   color: white;
-  font-size: 15px;
+  cursor: pointer;
   font-weight: bold;
+  margin-left: 5px;
 }
 
 .footer-container button:hover {
   transform: scale(1.02);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1180px) {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
