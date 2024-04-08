@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <>
       <Navbar />
-      <div className="home-banner-container">
-        <div className="home-bannerImage-container" id="header">
+      <div className="home-banner-container" id="header">
+        <div className="home-bannerImage-container">
           <img src={BannerImage} alt="" />
           <div className="header-text">
             <span className="large-text">Pekárna</span>
