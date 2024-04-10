@@ -1,3 +1,7 @@
+/* font-family: "Akaya Kanadaka", system-ui; Font pro nadpisy
+font-family: "Parisienne", cursive; Font pro jméno pekárny
+font-family: "Source Serif 4", serif; Font pro všechen text */
+
 body {
   background-image: url("./assets/pozadi.jpg");
   background-size: contain;
@@ -5,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 18px;
+  font-family: "Source Serif 4", serif;
 }
 
 /* NAVBAR */
@@ -23,6 +28,27 @@ body {
   font-family: "Akaya Kanadaka", system-ui;
   font-size: 20px;
   margin: 5px;
+  position: relative;
+}
+
+.navbar button:hover {
+  transform: scale(1.05);
+}
+
+.navbar-links-container button:not(.dropdown-button)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-links-container button:hover:not(.dropdown-button)::after {
+  width: calc(100% - 40px);
+  left: 20px;
 }
 
 .dropdown-button,
@@ -332,10 +358,7 @@ body {
   text-align: center;
 }
 
-.job-offer-text p {
-  padding: 0 10%;
-}
-
+.job-offer-text p,
 .job-offer-text2 {
   padding: 0 10%;
 }
@@ -363,7 +386,7 @@ body {
   .job-offer-part2 img {
     margin-top: 20px;
     width: 100%;
-    height: auto; 
+    height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
   }
@@ -381,6 +404,11 @@ body {
   width: 100%;
 }
 
+.retailers-container img {
+  max-width: 1200px;
+  width: 100%;
+}
+
 /* CONTACT */
 .contact-boxes {
   max-width: 1200px;
@@ -394,7 +422,8 @@ body {
 .history-container2 h2,
 .retailers-container h2,
 .history-container h2,
-.contact-container h2 {
+.contact-container h2,
+.contact-container h3 {
   display: flex;
   justify-content: center;
   font-family: "Akaya Kanadaka", system-ui;

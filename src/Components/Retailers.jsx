@@ -1,4 +1,5 @@
 import React from "react";
+import ThreeInOne from "../assets/3v1.png";
 
 const Retailers = () => {
   return (
@@ -9,6 +10,7 @@ const Retailers = () => {
         width="640"
         height="480"
       ></iframe>
+      <img src={ThreeInOne} alt="" />
     </div>
   );
 };
