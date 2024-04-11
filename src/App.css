@@ -150,6 +150,37 @@ body {
   text-align: justify;
 }
 
+.fade-left {
+  animation: fadeLeft 1s ease-in;
+}
+
+.fade-right {
+  animation: fadeRight 1s ease-in;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 .first-part,
 .second-part {
   display: flex;
@@ -191,75 +222,21 @@ body {
 
 /* HISTORY */
 .history-container {
-  max-width: 1200px;
-  margin: 30px auto;
-  color: white;
-}
-
-.history-content {
-  --R: 200px; /* radius */
-  --m: 15px; /* margin */
-  --t: 100px; /* distance from top */
-}
-
-.history-content p {
-  width: 50%;
-  margin: 0;
-  padding: 0 var(--m);
-  display: inline-block;
-  vertical-align: top;
-  font-size: initial;
-  text-align: justify;
-  font-size: 20px;
-}
-
-.history-content p:before {
-  content: "";
-  width: var(--R);
-  height: calc(2 * var(--R));
-  padding: var(--m) 0 var(--m) var(--m);
-  margin-top: var(--t);
-  background: var(--img) content-box;
-  shape-outside: circle(
-    var(--R) at var(--d, right) calc(-1 * var(--m)) top calc(50% + var(--t) / 2)
-  );
-  float: right;
-  margin-right: calc(-1 * var(--m));
-}
-
-.history-content p:last-child:before {
-  float: left;
-  padding: var(--m) var(--m) var(--m) 0;
-  --d: left;
-  background-position: right;
-  border-radius: 0 500px 500px 0;
-  margin-left: calc(-1 * var(--m));
-  margin-right: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* HISTORIE 2 VERZE */
-.history-container2 {
   color: white;
   max-width: 1200px;
   margin: 0 auto;
   text-align: justify;
 }
 
-.history-content2 {
+.history-content {
   display: flex;
   flex-direction: row;
 }
 
-.history-image2 img {
+.history-image img {
   width: 350px;
   float: right;
-  margin: 20px 0 20px 20px;
+  margin: 20px 0 5px 20px;
 }
 
 .right-column {
@@ -290,9 +267,18 @@ body {
 .products-container h2,
 .job-offer-container h2 {
   font-family: "Akaya Kanadaka", system-ui;
-
   font-weight: 400;
   font-size: 30px;
+}
+
+.boxes-container .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.boxes-container img {
+  width: 200px;
 }
 
 /* Modal */

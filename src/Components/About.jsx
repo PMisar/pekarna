@@ -5,7 +5,7 @@ const About = () => {
     <div className="about-container" id="about">
       <h2>O nás</h2>
       <div className="first-part">
-        <p className="about-text">
+        <p className="about-text fade-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
           elementum, felis a ultricies ultricies, tellus augue efficitur ligula,
           eget ornare tellus odio vel velit. Mauris vel scelerisque ante. Ut
@@ -20,7 +20,7 @@ const About = () => {
       <div className="second-part">
         <img src="/src/assets/about-image2.jpg" alt="Falling Flour Image" />
         <div className="background-rectangle">
-          <p className="about-text">
+          <p className="about-text fade-right">
             Mauris convallis lacus ut arcu pellentesque, eget pellentesque
             sapien feugiat. Aliquam erat volutpat. In tincidunt aliquet
             convallis. In hac habitasse platea dictumst. Nam posuere nunc quis

@@ -15,9 +15,8 @@ const JobOffer = () => {
           </p>
         </div>
       </div>
-
       <div className="job-offer-part2">
-        <div className="job-offer-text2">
+        <div className="job-offer-text2 fade-left">
           <h3>Požadujeme:</h3>
           <ul>
             <li>Manuální zručnost</li>
