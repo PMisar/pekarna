@@ -1,4 +1,6 @@
 import React from "react";
+import AboutImage from "../assets/about-image.jpg";
+import AboutImage2 from "../assets/about-image2.jpg";
 
 const About = () => {
   return (
@@ -15,10 +17,10 @@ const About = () => {
           In ac blandit lorem. Sed non imperdiet est. In vestibulum ligula sed
           purus convallis condimentum.
         </p>
-        <img src="/src/assets/about-image.jpg" alt="Holding Dough Image" />
+        <img src={AboutImage} alt="Holding Dough Image" />
       </div>
       <div className="second-part">
-        <img src="/src/assets/about-image2.jpg" alt="Falling Flour Image" />
+        <img src={AboutImage2} alt="Falling Flour Image" />
         <div className="background-rectangle">
           <p className="about-text fade-right">
             Mauris convallis lacus ut arcu pellentesque, eget pellentesque
