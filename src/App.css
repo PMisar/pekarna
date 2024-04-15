@@ -82,7 +82,11 @@ body {
     border-bottom: 1px solid #ffffff;
   }
 
-  .dropdown-button:hover,
+  .dropdown-button:hover {
+    background-color: #fa8f8f;
+    border-radius: 5px;
+  }
+
   .dropdown-content button:hover {
     background-color: #e95656;
   }
@@ -93,7 +97,6 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #e95656;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -102,7 +105,7 @@ body {
 }
 
 .scroll-to-top-button:hover {
-  background-color: #ff7f7f;
+  background-color: #fa8f8f;
 }
 
 /* HEADER */
@@ -514,4 +517,20 @@ h2,
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+/* PAGES */
+.privacy-policy-page,
+.cookies-policy-page {
+  font-family: "Source Serif 4", serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px;
+  text-align: justify;
+}
+
+.privacy-policy-page h1,
+.cookies-policy-page h1 {
+  font-family: "Akaya Kanadaka", system-ui;
+  text-align: center;
 }

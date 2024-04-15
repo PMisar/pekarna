@@ -1,7 +1,17 @@
 import React from "react";
+import axios from 'axios';
 import phoneIcon from "../assets/telefon.png";
 import emailIcon from "../assets/posta.png";
 import locationIcon from "../assets/adresa.png";
+
+// const handleSubmit = async (formData) => {
+//   try {
+//       const response = await axios.post('http://localhost:3000/api/submit-form', formData);
+//       console.log(response.data);
+//   } catch (error) {
+//       console.error('Error submitting form:', error);
+//   }
+// };
 
 const Contact = () => {
   return (
