@@ -71,7 +71,7 @@ body {
     position: absolute;
     background-color: #727070;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    top: 60px;
+    top: 70px;
     right: -40px;
     z-index: 1;
   }
@@ -84,7 +84,9 @@ body {
 
   .dropdown-button:hover {
     background-color: #fa8f8f;
+    padding: 10px 20px;
     border-radius: 5px;
+    top: 10px;
   }
 
   .dropdown-content button:hover {
@@ -245,17 +247,18 @@ body {
 }
 
 .history-image img {
-  width: 350px;
-  float: right;
-  margin: 20px 0 5px 20px;
-}
-
-.right-column {
-  border-left: 1px solid #ffffff;
-  width: calc(33.33% - 0.5px);
+  float: left;
+  height: 300px;
+  width: auto;
+  margin: 20px 15px 0 0;
 }
 
 .left-column {
+  border-right: 1px solid #ffffff;
+  width: calc(33.33% - 0.5px);
+}
+
+.right-column {
   width: calc(66.67% - 0.5px);
 }
 
@@ -263,6 +266,30 @@ body {
 .right-column {
   padding: 0 15px;
 }
+
+@media screen and (max-width: 800px) {
+  .history-content {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .left-column {
+    width: 80%;
+    border: none;
+  }
+
+  .right-column {
+    width: 80%;
+  }
+
+  .history-image img {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 /* PRODUCTS */
 .products-container {
@@ -371,11 +398,13 @@ body {
 
   .job-offer-part2 img {
     margin-top: 20px;
-    width: 100%;
+    width: 80%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-  }
+    display: flex;
+justify-content: center;  
+}
 }
 
 /* RETAILERS */
@@ -452,6 +481,13 @@ h2,
   margin-top: 5px;
 }
 
+.fixed-textarea {
+  resize: none;
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+}
+
 .right-box form button {
   background-color: #4caf50;
   color: #ffffff;
@@ -461,6 +497,7 @@ h2,
 
 .right-box form button:hover {
   transform: scale(1.02);
+  background-color: #70bd72;
 }
 
 .right-box h2 {

@@ -1,5 +1,5 @@
 import React from "react";
-import axios from 'axios';
+import axios from "axios";
 import phoneIcon from "../assets/telefon.png";
 import emailIcon from "../assets/posta.png";
 import locationIcon from "../assets/adresa.png";
@@ -27,7 +27,8 @@ const Contact = () => {
             <img src={emailIcon} alt="Email icon" /> pekarna@vetrnyjenikov.cz
           </p>
           <p>
-            <img src={locationIcon} alt="Location icon" /> Větrný Jeníkov 34, 588 42 Větrný Jeníkov, Česko
+            <img src={locationIcon} alt="Location icon" /> Větrný Jeníkov 34,
+            588 42 Větrný Jeníkov, Česko
           </p>
         </div>
         <div className="right-box">
@@ -47,7 +48,12 @@ const Contact = () => {
             </div>
             <div>
               <label htmlFor="message">Zpráva:</label>
-              <textarea id="message" name="message" rows="4"></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                className="fixed-textarea"
+              ></textarea>{" "}
             </div>
             <button type="submit">Odeslat</button>
           </form>
