@@ -6,6 +6,7 @@ import JobOffer from "./Components/JobOffer";
 import Retailers from "./Components/Retailers";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import ScrollToTopButton from "./Components/ScrollToTopButton";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Retailers />
       <Contact />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

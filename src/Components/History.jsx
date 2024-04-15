@@ -4,7 +4,7 @@ import HistoryImage from "../assets/history.jpg";
 const History = () => {
   return (
     <>
-      <div className="history-container">
+      <div className="history-container" id="history">
         <h2>Historie</h2>
         <div className="history-content">
           <div className="left-column">

@@ -6,29 +6,30 @@ body {
   background-image: url("./assets/pozadi.jpg");
   background-size: contain;
   background-position: center;
+  font-family: "Source Serif 4", serif;
+  font-size: 18px;
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  font-family: "Source Serif 4", serif;
 }
 
 /* NAVBAR */
 .navbar {
   position: absolute;
-  z-index: 2;
   right: 20px;
+  z-index: 2;
 }
 
 .navbar button {
+  position: relative;
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
-  padding: 20px;
   font-family: "Akaya Kanadaka", system-ui;
   font-size: 20px;
   margin: 5px;
-  position: relative;
+  padding: 20px;
 }
 
 .navbar button:hover {
@@ -36,13 +37,13 @@ body {
 }
 
 .navbar-links-container button:not(.dropdown-button)::after {
-  content: "";
   position: absolute;
+  background-color: #ffffff;
+  content: "";
   left: 0;
   bottom: 10px;
   width: 0;
   height: 2px;
-  background-color: white;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -68,17 +69,17 @@ body {
 
   .dropdown-content {
     position: absolute;
+    background-color: #727070;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     top: 60px;
     right: -40px;
-    background-color: rgb(124, 114, 114);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
 
   .dropdown-content button {
     text-decoration: none;
     width: 100vw;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff;
   }
 
   .dropdown-button:hover,
@@ -87,10 +88,26 @@ body {
   }
 }
 
+/* SCROLL TO THE TOP BUTTON */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e95656;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #ff7f7f;
+}
+
 /* HEADER */
 .home-bannerImage-container {
   position: relative;
-  color: white;
 }
 
 .home-bannerImage-container img {
@@ -135,7 +152,6 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  color: white;
 }
 
 .about-container h2 {
@@ -145,9 +161,42 @@ body {
   font-size: 30px;
 }
 
+.about-container img {
+  max-height: 500px;
+}
+
 .about-text {
   padding: 10%;
   text-align: justify;
+}
+
+.first-part,
+.second-part {
+  display: flex;
+  align-items: center;
+}
+
+.background-rectangle {
+  background-color: #e95656;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .first-part,
+  .second-part {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-container img {
+    width: 50%;
+    height: auto;
+    max-width: none;
+    margin: 0;
+  }
 }
 
 .fade-left {
@@ -180,49 +229,8 @@ body {
   }
 }
 
-
-.first-part,
-.second-part {
-  display: flex;
-  align-items: center;
-}
-
-.first-part img,
-.second-part img {
-  max-height: 500px;
-}
-
-.background-rectangle {
-  background-color: #e95656;
-  height: 500px;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 800px) {
-  .first-part,
-  .second-part {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .first-part img,
-  .second-part img {
-    width: 50%;
-    height: auto;
-    max-width: none;
-    margin: 0;
-  }
-
-  .first-part {
-    margin-bottom: 20px;
-  }
-}
-
 /* HISTORY */
 .history-container {
-  color: white;
   max-width: 1200px;
   margin: 0 auto;
   text-align: justify;
@@ -240,7 +248,7 @@ body {
 }
 
 .right-column {
-  border-left: 1px solid white;
+  border-left: 1px solid #ffffff;
   width: calc(33.33% - 0.5px);
 }
 
@@ -255,20 +263,12 @@ body {
 
 /* PRODUCTS */
 .products-container {
+  max-width: 1200px;
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
   margin: 0 auto;
-  color: white;
   text-align: center;
-}
-
-.products-container h2,
-.job-offer-container h2 {
-  font-family: "Akaya Kanadaka", system-ui;
-  font-weight: 400;
-  font-size: 30px;
 }
 
 .boxes-container .box {
@@ -326,21 +326,18 @@ body {
 
 .box:hover {
   transform: scale(1.05);
+  box-shadow: 0 2px 4px 0 #e95656;
 }
 
 /* JOB OFFER */
 .job-offer-container {
   max-width: 1200px;
   margin: 0 auto;
-  color: white;
 }
 
 .color-background {
   background-color: #e95656;
   padding: 20px;
-}
-
-.job-offer-text {
   text-align: center;
 }
 
@@ -355,7 +352,7 @@ body {
 
 .job-offer-text2 a {
   text-decoration: none;
-  color: white;
+  color: inherit;
   font-weight: bold;
 }
 
@@ -382,16 +379,16 @@ body {
 .retailers-container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  color: white;
+  color: #ffffff;
 }
 
 .retailers-container iframe {
   width: 100%;
+  height: 450px;
+  border: none;
 }
 
 .retailers-container img {
-  max-width: 1200px;
   width: 100%;
 }
 
@@ -401,14 +398,11 @@ body {
   margin: 0 auto;
   display: flex;
   width: 100%;
-  color: white;
+  color: #ffffff;
   flex-direction: row;
 }
 
-.history-container2 h2,
-.retailers-container h2,
-.history-container h2,
-.contact-container h2,
+h2,
 .contact-container h3 {
   display: flex;
   justify-content: center;
@@ -449,7 +443,7 @@ body {
 .right-box form button {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 5px;
@@ -457,7 +451,7 @@ body {
 
 .right-box form button {
   background-color: #4caf50;
-  color: white;
+  color: #ffffff;
   border: none;
   cursor: pointer;
 }
@@ -501,18 +495,14 @@ body {
   align-items: center;
 }
 
-.footer-container p,
 .footer-container button {
-  font-size: 18px;
-}
-
-.footer-container button {
-  background-color: transparent;
+  background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   font-weight: bold;
   margin-left: 5px;
+  font-size: 18px;
 }
 
 .footer-container button:hover {
