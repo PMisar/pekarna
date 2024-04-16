@@ -184,9 +184,6 @@ body {
 
 .about-container h2 {
   position: absolute;
-  font-family: "Akaya Kanadaka", system-ui;
-  font-weight: 400;
-  font-size: 30px;
 }
 
 .about-container img {
@@ -214,7 +211,13 @@ body {
 
 @media (max-width: 800px) {
   .about-container {
-    margin-top: 7%;
+    margin-top: 30px;
+  }
+
+  .about-container h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
   }
 
   .first-part,
@@ -228,7 +231,6 @@ body {
     width: 50%;
     height: auto;
     max-width: none;
-    margin: 0;
   }
 }
 
@@ -454,6 +456,8 @@ body {
 
 .retailers-container img {
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 /* CONTACT */
