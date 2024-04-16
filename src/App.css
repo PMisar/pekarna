@@ -1,7 +1,6 @@
 /* font-family: "Akaya Kanadaka", system-ui; Font pro nadpisy
 font-family: "Parisienne", cursive; Font pro jméno pekárny
 font-family: "Source Serif 4", serif; Font pro všechen text */
-
 body {
   background-image: url("./assets/pozadi.jpg");
   background-size: contain;
@@ -28,7 +27,6 @@ body {
   cursor: pointer;
   font-family: "Akaya Kanadaka", system-ui;
   font-size: 22px;
-  margin: 5px;
   padding: 20px;
 }
 
@@ -70,9 +68,10 @@ body {
   .dropdown-content {
     position: absolute;
     background-color: #727070;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    top: 70px;
-    right: -40px;
+    top: 60px;
+    width: 100vw;
+    transform: translateX(-90%);
+    padding-top: 10px;
     z-index: 1;
   }
 
@@ -80,6 +79,7 @@ body {
     text-decoration: none;
     width: 100vw;
     border-bottom: 1px solid #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
 
   .dropdown-button:hover {
@@ -99,11 +99,11 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  color: #ffffff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .scroll-to-top-button:hover {
@@ -111,17 +111,17 @@ body {
 }
 
 /* HEADER */
-.home-bannerImage-container {
+.home-banner-container {
   position: relative;
 }
 
-.home-bannerImage-container img {
+.home-banner-container img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-.home-bannerImage-container::before {
+.home-banner-container::before {
   content: "";
   position: absolute;
   width: 50%;
@@ -138,24 +138,47 @@ body {
   transform: translate(-50%, -50%);
   font-family: "Parisienne", cursive;
   z-index: 1;
+  line-height: 1;
 }
 
 .large-text {
   font-size: 70px;
-  line-height: 0.8;
 }
 
 .small-text {
   font-size: 38px;
 }
 
+@media (max-width: 800px) {
+  .home-banner-container img {
+    height: 180px;
+  }
+
+  .home-banner-container::before {
+    height: 210px;
+  }
+
+  .header-text {
+    top: 50%;
+    left: 22%;
+  }
+
+  .large-text {
+    font-size: 50px;
+  }
+
+  .small-text {
+    font-size: 26px;
+  }
+}
+
 /* ABOUT */
 .about-container {
+  max-width: 1200px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -168,6 +191,7 @@ body {
 
 .about-container img {
   max-height: 500px;
+  object-fit: cover;
 }
 
 .about-text {
@@ -189,6 +213,10 @@ body {
 }
 
 @media (max-width: 800px) {
+  .about-container {
+    margin-top: 7%;
+  }
+
   .first-part,
   .second-part {
     flex-direction: row;
@@ -205,11 +233,11 @@ body {
 }
 
 .fade-left {
-  animation: fadeLeft 1s ease-in;
+  animation: fadeLeft 2s ease-in;
 }
 
 .fade-right {
-  animation: fadeRight 1s ease-in;
+  animation: fadeRight 2s ease-in;
 }
 
 @keyframes fadeLeft {
@@ -238,12 +266,12 @@ body {
 .history-container {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: justify;
 }
 
 .history-content {
   display: flex;
   flex-direction: row;
+  text-align: justify;
 }
 
 .history-image img {
@@ -256,20 +284,22 @@ body {
 .left-column {
   border-right: 1px solid #ffffff;
   width: calc(33.33% - 0.5px);
+  padding-right: 15px;
 }
 
 .right-column {
   width: calc(66.67% - 0.5px);
+  padding-left: 15px;
 }
 
-.left-column,
-.right-column {
-  padding: 0 15px;
+@media screen and (max-width: 1200px) {
+  .history-content {
+    margin: 0 5%;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .history-content {
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -277,10 +307,12 @@ body {
   .left-column {
     width: 80%;
     border: none;
+    padding: 0;
   }
 
   .right-column {
     width: 80%;
+    padding: 0;
   }
 
   .history-image img {
@@ -290,25 +322,43 @@ body {
   }
 }
 
-
 /* PRODUCTS */
 .products-container {
   max-width: 1200px;
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 
-.boxes-container .box {
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boxes-container img {
+  width: 200px;
+}
+
+.box {
+  width: 375px;
+  height: 200px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #e95656;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.boxes-container img {
-  width: 200px;
+.box:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); */
 }
 
 /* Modal */
@@ -319,7 +369,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   justify-content: center;
   align-items: center;
 }
@@ -339,24 +389,10 @@ body {
   cursor: pointer;
 }
 
-.boxes-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.box {
-  width: 375px;
-  height: 200px;
-  margin: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid #e95656;
-  cursor: pointer;
-}
-
-.box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 4px 0 #e95656;
+@media (max-width: 800px) {
+  .box {
+    width: 80%;
+  }
 }
 
 /* JOB OFFER */
@@ -399,19 +435,15 @@ body {
   .job-offer-part2 img {
     margin-top: 20px;
     width: 80%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
     display: flex;
-justify-content: center;  
-}
+    justify-content: center;
+  }
 }
 
 /* RETAILERS */
 .retailers-container {
   max-width: 1200px;
   margin: 0 auto;
-  color: #ffffff;
 }
 
 .retailers-container iframe {
@@ -427,18 +459,15 @@ justify-content: center;
 /* CONTACT */
 .contact-boxes {
   max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  width: 100%;
-  color: #ffffff;
-  flex-direction: row;
+  margin: 0 auto;
 }
 
 h2,
 .contact-container h3 {
+  font-family: "Akaya Kanadaka", system-ui;
   display: flex;
   justify-content: center;
-  font-family: "Akaya Kanadaka", system-ui;
   font-weight: 400;
   font-size: 30px;
 }
@@ -458,12 +487,10 @@ h2,
 .right-box {
   flex: 1;
   background-color: #e95656;
-  padding: 20px;
 }
 
 .right-box form {
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
 }
 
 .right-box form div {
@@ -474,11 +501,11 @@ h2,
 .right-box form textarea,
 .right-box form button {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ffffff;
+  padding: 10px;
+  border: none;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-top: 5px;
+  font-size: 16px;
 }
 
 .fixed-textarea {
@@ -491,18 +518,18 @@ h2,
 .right-box form button {
   background-color: #4caf50;
   color: #ffffff;
-  border: none;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .right-box form button:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
   background-color: #70bd72;
 }
 
 .right-box h2 {
   margin: 0;
-  padding: 0;
+  padding-top: 20px;
 }
 
 .iframe-container {
@@ -523,16 +550,15 @@ h2,
   }
 
   .left-box {
-    margin: 20px;
+    margin: 40px 10px;
   }
 }
 
 /* FOOTER */
 .footer-container {
-  color: #ffffff;
-  padding: 10px 20px;
   display: flex;
   align-items: center;
+  padding: 10px;
 }
 
 .footer-container button {
@@ -540,8 +566,8 @@ h2,
   border: none;
   color: #ffffff;
   cursor: pointer;
+  margin-left: 10px;
   font-weight: bold;
-  margin-left: 5px;
   font-size: 16px;
 }
 
@@ -554,22 +580,22 @@ h2,
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .footer-container button {
+    margin-left: 0;
+  }
 }
 
 /* PAGES */
-.privacy-policy-page,
-.cookies-policy-page {
-  font-family: "Source Serif 4", serif;
+#pages {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px;
-  text-align: justify;
+  line-height: 1.8;
 }
 
-.privacy-policy-page h1,
-.cookies-policy-page h1 {
+h1 {
   font-family: "Akaya Kanadaka", system-ui;
   text-align: center;
+  font-weight: 400;
 }
-
-/* NEW */

@@ -3,7 +3,7 @@ import React from "react";
 
 const CookiesPolicy = () => {
   return (
-    <div className="cookies-policy-page">
+    <div className="cookies-policy-page" id="pages">
       <h1>Jaké soubory cookies používáme?</h1>
       <ul>
         <li>

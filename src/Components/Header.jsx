@@ -7,14 +7,14 @@ const Header = () => {
     <>
       <Navbar />
       <div className="home-banner-container" id="header">
-        <div className="home-bannerImage-container">
+        {/* <div className="home-bannerImage-container"> */}
           <img src={BannerImage} alt="" />
           <div className="header-text">
             <span className="large-text">Pekárna</span>
             <br />
             <span className="small-text">Větrný Jeníkov</span>
           </div>
-        </div>
+        {/* </div> */}
       </div>
       </>
   );

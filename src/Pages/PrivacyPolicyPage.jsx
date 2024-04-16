@@ -3,7 +3,7 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy-policy-page">
+    <div className="privacy-policy-page" id="pages">
       <h1>Zásady zpracování osobních údajů</h1>
       <p>
         Vaše soukromí a bezpečnost vašich osobních údajů jsou pro nás prioritou.
