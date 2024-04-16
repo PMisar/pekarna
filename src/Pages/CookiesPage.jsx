@@ -1,4 +1,3 @@
-//Pages/CookiesPage.jsx
 import React from "react";
 
 const CookiesPolicy = () => {

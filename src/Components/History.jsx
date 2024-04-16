@@ -14,7 +14,6 @@ const History = () => {
       const rightColumnTop = rightColumn.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      // Checking if the element is in the viewport
       if (leftColumnTop < windowHeight) {
         leftColumn.classList.add("fade-left");
       }

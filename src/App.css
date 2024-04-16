@@ -151,24 +151,24 @@ body {
 
 @media (max-width: 800px) {
   .home-banner-container img {
-    height: 180px;
+    height: 120px;
   }
 
   .home-banner-container::before {
-    height: 210px;
+    height: 150px;
   }
 
   .header-text {
-    top: 50%;
+    top: 55%;
     left: 22%;
   }
 
   .large-text {
-    font-size: 50px;
+    font-size: 45px;
   }
 
   .small-text {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -235,11 +235,11 @@ body {
 }
 
 .fade-left {
-  animation: fadeLeft 2s ease-in;
+  animation: fadeLeft 1.5s ease-in;
 }
 
 .fade-right {
-  animation: fadeRight 2s ease-in;
+  animation: fadeRight 1.5s ease-in;
 }
 
 @keyframes fadeLeft {
@@ -278,8 +278,8 @@ body {
 
 .history-image img {
   float: left;
-  height: 300px;
   width: auto;
+  height: 300px;
   margin: 20px 15px 0 0;
 }
 
@@ -301,9 +301,14 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .history-container {
+    margin: 50px 0;
+  }
+
   .history-content {
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0;
   }
 
   .left-column {
@@ -321,6 +326,7 @@ body {
     float: none;
     width: 100%;
     height: auto;
+    margin: 0;
   }
 }
 
@@ -430,6 +436,9 @@ body {
 }
 
 @media (max-width: 800px) {
+  .job-offer-container {
+    margin: 50px 0;
+  }
   .job-offer-part2 {
     flex-direction: column;
   }
