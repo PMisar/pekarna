@@ -1,12 +1,17 @@
-/* font-family: "Akaya Kanadaka", system-ui; Font pro nadpisy
+/*   
 font-family: "Parisienne", cursive; Font pro jméno pekárny
-font-family: "Source Serif 4", serif; Font pro všechen text */
+font-family: "Josefin Sans", sans-serif;
+ Font pro nadpisy
+  font-family: "Crimson Text", serif;
+    font-family: "Aladin", system-ui;
+
+ Font pro všechen text */
 body {
   background-image: url("./assets/pozadi.jpg");
   background-size: contain;
   background-position: center;
-  font-family: "Source Serif 4", serif;
-  font-size: 16px;
+  font-family: "Crimson Text", serif;
+  font-size: 18px;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -25,7 +30,7 @@ body {
   border: none;
   color: #ffffff;
   cursor: pointer;
-  font-family: "Akaya Kanadaka", system-ui;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 22px;
   padding: 20px;
 }
@@ -55,7 +60,7 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
   .navbar-links-container button:not(.dropdown-button) {
     display: none;
   }
@@ -65,28 +70,29 @@ body {
     display: block;
   }
 
+  .dropdown-button:hover {
+    background-color: #fa8f8f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    top: 10px;
+  }
+
   .dropdown-content {
     position: absolute;
     background-color: #727070;
     top: 60px;
     width: 100vw;
-    transform: translateX(-83%);
-    padding-top: 10px;
+    transform: translateX(-87%);
     z-index: 1;
   }
 
   .dropdown-content button {
     text-decoration: none;
     width: 100vw;
+    margin-top: 5px;
+    left: 0;
     border-bottom: 1px solid #ffffff;
     transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-
-  .dropdown-button:hover {
-    background-color: #fa8f8f;
-    padding: 10px 20px;
-    border-radius: 5px;
-    top: 10px;
   }
 
   .dropdown-content button:hover {
@@ -151,11 +157,11 @@ body {
 
 @media (max-width: 800px) {
   .home-banner-container img {
-    height: 120px;
+    height: 140px;
   }
 
   .home-banner-container::before {
-    height: 150px;
+    height: 170px;
   }
 
   .header-text {
@@ -192,7 +198,7 @@ body {
 }
 
 .about-text {
-  padding: 10%;
+  padding: 3% 10%;
   text-align: justify;
 }
 
@@ -223,7 +229,6 @@ body {
 
   .first-part,
   .second-part {
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -231,7 +236,6 @@ body {
   .about-container img {
     width: 50%;
     height: auto;
-    max-width: none;
   }
 }
 
@@ -440,6 +444,7 @@ body {
   .job-offer-container {
     margin: 50px 0;
   }
+
   .job-offer-part2 {
     flex-direction: column;
   }
@@ -479,7 +484,7 @@ body {
 
 h2,
 .contact-container h3 {
-  font-family: "Akaya Kanadaka", system-ui;
+  font-family: "Josefin Sans", sans-serif;
   display: flex;
   justify-content: center;
   font-weight: 400;
@@ -588,6 +593,15 @@ h2,
 .footer-container button:hover {
   transform: scale(1.02);
 }
+.footer-container p {
+  border-right: 1px white solid;
+  padding: 0 10px;
+}
+.link a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 1180px) {
   .footer-container {
@@ -604,12 +618,12 @@ h2,
 #pages {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px;
+  padding: 60px;
   line-height: 1.8;
 }
 
 h1 {
-  font-family: "Akaya Kanadaka", system-ui;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
   font-weight: 400;
 }
