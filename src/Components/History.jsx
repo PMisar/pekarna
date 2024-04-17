@@ -74,10 +74,7 @@ const History = () => {
             est. In vestibulum ligula sed purus convallis condimentum.Lorem
             ipsum dolor sit amet, consectetur adipiscing elit. Proin
             elementum, felis a ultricies ultricies, tellus augue efficitur
-            ligula, eget ornare tellus odio vel velit. Mauris vel scelerisque
-            ante. Ut vitae felis dapibus, hendrerit lectus id, auctor urna.
-            Curabitur ex mauris, sagittis in turpis sit amet, ultricies
-            imperdiet felis.
+            ligula, eget ornare tellus odio vel velit.
           </p>
         </div>
       </div>
