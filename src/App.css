@@ -18,8 +18,8 @@ body {
 /* NAVBAR */
 .navbar {
   position: absolute;
-  right: 20px;
   z-index: 2;
+  right: 0;
 }
 
 .navbar button {
@@ -29,7 +29,7 @@ body {
   color: #ffffff;
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   padding: 20px;
 }
 
@@ -59,7 +59,7 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .navbar-links-container button:not(.dropdown-button) {
     display: none;
   }
@@ -69,27 +69,28 @@ body {
     display: block;
   }
 
+  .dropdown-button:hover + .dropdown-content,
+  .dropdown-content:hover {
+    display: block;
+  }
+
   .dropdown-button:hover {
-    background-color: #fa8f8f;
-    padding: 10px 20px;
-    border-radius: 5px;
-    top: 10px;
+    background-color: #f09595;
   }
 
   .dropdown-content {
     position: absolute;
-    background-color: #727070;
-    top: 60px;
+    background-color: #767272;
     width: 100vw;
-    transform: translateX(-87%);
     z-index: 1;
+    right: 0;
+    top: 100%;
   }
 
   .dropdown-content button {
     text-decoration: none;
     width: 100vw;
     margin-top: 5px;
-    left: 0;
     border-bottom: 1px solid #ffffff;
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
@@ -112,7 +113,7 @@ body {
 }
 
 .scroll-to-top-button:hover {
-  background-color: #fa8f8f;
+  background-color: #f09595;
 }
 
 /* HEADER */
@@ -389,6 +390,13 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 /* JOB OFFER */
 .job-offer-container,
 .retailers-container {
@@ -567,10 +575,10 @@ h2,
   transform: scale(1.02);
 }
 
-.footer-container p {
+/* .footer-container p {
   border-right: 1px white solid;
   padding: 0 10px;
-}
+} */
 
 /* .link a {
   text-decoration: none;
@@ -593,7 +601,7 @@ h2,
 .pages {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px;
+  padding: 25px;
   line-height: 1.8;
 }
 
