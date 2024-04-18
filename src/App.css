@@ -9,7 +9,7 @@ body {
   background-size: contain;
   background-position: center;
   font-family: "Crimson Text", serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -187,11 +187,6 @@ body {
   position: absolute;
 }
 
-.about-container img {
-  max-height: 500px;
-  object-fit: cover;
-}
-
 .about-text {
   padding: 3% 10%;
   text-align: justify;
@@ -272,15 +267,12 @@ body {
 
 .history-content {
   display: flex;
-  flex-direction: row;
   text-align: justify;
 }
 
 .history-image img {
   float: left;
-  width: auto;
-  height: 300px;
-  margin: 20px 15px 0 0;
+  margin: 25px 15px 0 0;
 }
 
 .left-column {
@@ -301,10 +293,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .history-container {
-    margin: 50px 0;
-  }
-
   .history-content {
     justify-content: center;
     flex-wrap: wrap;
@@ -336,10 +324,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   font-size: 22px;
-}
-
-.boxes-container img {
-  width: 200px;
 }
 
 .box {
@@ -431,16 +415,11 @@ body {
 }
 
 @media (max-width: 800px) {
-  .job-offer-container {
-    margin: 50px 0;
-  }
-
   .job-offer-part2 {
     flex-direction: column;
   }
 
   .job-offer-part2 img {
-    margin-top: 20px;
     width: 100%;
   }
 }
@@ -469,7 +448,6 @@ h2,
   display: flex;
   justify-content: center;
   font-weight: 400;
-  font-size: 30px;
 }
 
 .left-box {
@@ -478,10 +456,8 @@ h2,
   flex-direction: column;
 }
 
-.left-box p,
-.left-box h3 {
-  padding: 0 10%;
-  font-size: 20px;
+.left-box p {
+  padding: 0 20%;
 }
 
 .right-box {
@@ -603,6 +579,7 @@ h2,
   margin: 0 auto;
   padding: 25px;
   line-height: 1.8;
+  font-size: 22px;
 }
 
 h1 {

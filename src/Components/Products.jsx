@@ -5,6 +5,7 @@ import dalamanekImage from "../assets/dalamanek.png";
 import houskaImage from "../assets/houska.png";
 import houskaCelozrnaImage from "../assets/houskacelozrna.png";
 import kolacImage from "../assets/kolac.png";
+import kolac2Image from "../assets/kolac2.png";
 import vanockaImage from "../assets/vanocka.png";
 
 // Modal Component
@@ -49,11 +50,13 @@ const Products = () => {
       "Obyčejná houska, ideální pro snídani nebo svačinu. Obsahuje pšeničnou mouku, vodu, droždí, sůl. Alergeny: obsahuje pšeničnou mouku.",
     "Houska cereální":
       "Houska s cereáliemi, bohatá na vlákninu a chutná. Obsahuje pšeničnou mouku, vodu, droždí, sůl, cereálie. Alergeny: obsahuje pšeničnou mouku, cereálie.",
-    "Dalamánek":
+    Dalamánek:
       "Sladký výrobek s náplní, ideální k čaji nebo kávě. Obsahuje pšeničnou mouku, cukr, máslo, droždí, sůl, náplň. Alergeny: obsahuje pšeničnou mouku, máslo.",
-    "Vánočka":
+    Vánočka:
       "Tradiční vánoční pečivo, vhodné k oslavě svátků. Obsahuje pšeničnou mouku, cukr, máslo, droždí, sůl, sušené ovoce. Alergeny: obsahuje pšeničnou mouku, máslo, sušené ovoce.",
-    "Koláč":
+    Koláč:
+      "Koláč s ovocnou náplní, ideální k odpolednímu čaji. Obsahuje pšeničnou mouku, cukr, máslo, droždí, sůl, ovocná náplň. Alergeny: obsahuje pšeničnou mouku, máslo.",
+    "Koláč hranatý":
       "Koláč s ovocnou náplní, ideální k odpolednímu čaji. Obsahuje pšeničnou mouku, cukr, máslo, droždí, sůl, ovocná náplň. Alergeny: obsahuje pšeničnou mouku, máslo.",
   };
 
@@ -62,9 +65,10 @@ const Products = () => {
     "Chléb malý": chlebMalyImage,
     "Houska obyčejná": houskaImage,
     "Houska cereální": houskaCelozrnaImage,
-    "Dalamánek": dalamanekImage,
-    "Vánočka": vanockaImage,
-    "Koláč": kolacImage,
+    Dalamánek: dalamanekImage,
+    Vánočka: vanockaImage,
+    Koláč: kolacImage,
+    "Koláč hranatý": kolac2Image,
   };
 
   return (
