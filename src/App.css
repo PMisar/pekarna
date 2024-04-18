@@ -224,8 +224,12 @@ body {
   }
 
   .about-container img {
-    width: 50%;
+    width: 100%;
     height: auto;
+  }
+
+  .img1 {
+    display: none;
   }
 }
 
@@ -262,7 +266,7 @@ body {
 /* HISTORY */
 .history-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .history-content {
@@ -380,8 +384,6 @@ body {
   }
 } */
 
-
-/* PRODUCTS */
 .boxes-container {
   display: flex;
   flex-wrap: wrap;
@@ -413,7 +415,6 @@ body {
 .front {
   background-color: rgba(255, 255, 255, 0.12);
   border: 1px solid #e95656;
-  /* border-radius: 10px; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -423,7 +424,6 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 5px;
-  /* border-radius: 10px; */
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
@@ -450,10 +450,9 @@ body {
 }
 
 /* JOB OFFER */
-.job-offer-container,
-.retailers-container {
+.job-offer-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 
 .color-background {
@@ -493,6 +492,11 @@ body {
 }
 
 /* RETAILERS */
+.retailers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .retailers-container iframe {
   width: 100%;
   height: 450px;

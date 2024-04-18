@@ -103,7 +103,6 @@
 
 // export default Products;
 
-
 import React, { useState } from "react";
 import chlebVelkyImage from "../assets/chlebvelky.png";
 import chlebMalyImage from "../assets/chlebmaly.png";
@@ -114,24 +113,8 @@ import kolacImage from "../assets/kolac.png";
 import kolac2Image from "../assets/kolac2.png";
 import vanockaImage from "../assets/vanocka.png";
 
-// Modal Component
-// const Modal = ({ onClose, productName, productDetails }) => {
-//   return (
-//     <div className="modal">
-//       <div className="modal-content">
-//         <span className="close" onClick={onClose}>
-//           &times;
-//         </span>
-//         <h2>{productName}</h2>
-//         <p>{productDetails}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
 // Products Component
 const Products = () => {
-  const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("");
   const [productDetails, setProductDetails] = useState("");
 
@@ -181,7 +164,7 @@ const Products = () => {
     <div className="products-container" id="products">
       <div className="centered-content">
         <h2>Naše výroba</h2>
-        <p>*Hover na obrázek pro více informací</p>
+        <p>*Najeď na obrázek pro více informací</p>
       </div>
       <div className="boxes-container">
         {Object.keys(productsData).map((productName) => (
@@ -196,20 +179,13 @@ const Products = () => {
                 <div>{productName}</div>
               </div>
               <div className="back">
-                <p>{productsData[productName]}</p> {/* Display product details here */}
+                <p>{productsData[productName]}</p>{" "}
+                {/* Display product details here */}
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      {/* {showModal && (
-        <Modal
-          onClose={handleCloseModal}
-          productName={selectedProduct}
-          productDetails={productDetails}
-        />
-      )} */}
     </div>
   );
 };
