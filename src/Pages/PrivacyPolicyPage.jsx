@@ -19,15 +19,6 @@ const PrivacyPolicy = () => {
           Kontaktní informace: Jméno, e-mailová adresa, telefonní číslo a
           adresa.
         </li>
-        <li>Demografické informace: Věk, pohlaví, země pobytu.</li>
-        <li>
-          Informace o platbách: Údaje o platební kartě nebo jiné platební
-          informace.
-        </li>
-        <li>
-          Technické informace: Informace o vašem zařízení, včetně IP adresy,
-          prohlížeče, operačního systému a nastavení jazyka.
-        </li>
       </ul>
       <h2>Jak používáme osobní údaje?</h2>
       <p>Vaše osobní údaje používáme pro následující účely:</p>
