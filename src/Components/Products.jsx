@@ -106,11 +106,11 @@
 import React, { useState } from "react";
 import chlebVelkyImage from "../assets/chlebvelky.png";
 import chlebMalyImage from "../assets/chlebmaly.png";
-import dalamanekImage from "../assets/dalamanek.png";
-import houskaImage from "../assets/houska.png";
-import houskaCelozrnaImage from "../assets/houskacelozrna.png";
-import kolacImage from "../assets/kolac.png";
-import kolac2Image from "../assets/kolac2.png";
+import dalamanekImage from "../assets/dalamanek.jpg";
+import houskaImage from "../assets/houska.jpg";
+import houskaCelozrnaImage from "../assets/houskacelozrna.jpg";
+import kolacImage from "../assets/kolac.jpg";
+import kolac2Image from "../assets/kolac2.jpg";
 import vanockaImage from "../assets/vanocka.png";
 
 // Products Component
@@ -176,8 +176,9 @@ const Products = () => {
             >
               <div className="front">
                 <img src={productImages[productName]} alt={productName} />
-                <div>{productName}</div>
+                <div className="product-name">{productName}</div>
               </div>
+
               <div className="back">
                 <p>{productsData[productName]}</p>{" "}
                 {/* Display product details here */}

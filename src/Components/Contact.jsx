@@ -32,18 +32,6 @@ const Contact = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleSubmit = async (formData) => {
-    try {
-      const response = await axios.post(
-        "http://localhost:3000/api/submit-form",
-        formData
-      );
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
-  };
-
   return (
     <div className="contact-container" id="contact">
       <div className="contact-boxes">
@@ -60,10 +48,16 @@ const Contact = () => {
             <img src={locationIcon} alt="Location icon" /> Větrný Jeníkov 34,
             588 42 Větrný Jeníkov, Česko
           </p>
+          <p>
+          IČO: 29363870
+          </p>
+          <p>
+          DIČ: CZ12341234
+          </p>
         </div>
         <div className="right-box" ref={rightBoxRef}>
           <h2>Napište nám</h2>
-          <form onSubmit={handleSubmit}>
+          <form>
             <div>
               <label htmlFor="name">Jméno:</label>
               <input type="text" id="name" name="name" />
@@ -86,6 +80,7 @@ const Contact = () => {
               ></textarea>{" "}
             </div>
             <button type="submit">Odeslat</button>
+            <p style={{ fontSize: "18px", textAlign: "center" }}>Vložením osobních údajů souhlasíte s podmínkami ochrany osobních údajů.</p>
           </form>
         </div>
       </div>

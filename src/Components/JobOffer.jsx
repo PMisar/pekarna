@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import RollerImage from "../assets/job-offer-image.jpg";
+import RollerImage from "../assets/job-offer-image.png";
 
 const JobOffer = () => {
   const textRef = useRef(null);
@@ -35,9 +35,9 @@ const JobOffer = () => {
         <div className="color-background">
           <h3 ref={textRef}>🍞 Pekař Hledán! 🍞</h3>
           <p ref={textRef}>
-            Přijmeme do našeho týmu zaměstnance na <b>hlavní pracovní poměr</b>! Pokud máte
-            rádi výzvy a chcete být součástí kreativního prostředí, máme pro vás
-            skvělou příležitost.
+            Přijmeme do našeho týmu zaměstnance na <b>hlavní pracovní poměr</b>!
+            Pokud máte rádi výzvy a chcete být součástí kreativního prostředí,
+            máme pro vás skvělou příležitost.
           </p>
         </div>
       </div>

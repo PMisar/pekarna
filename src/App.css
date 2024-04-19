@@ -10,6 +10,7 @@ body {
   background-position: center;
   font-family: "Crimson Text", serif;
   font-size: 20px;
+  min-width: 340px;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -226,7 +227,7 @@ body {
   }
 
   .about-container img {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 
@@ -406,6 +407,22 @@ body {
   transition: transform 0.8s;
 }
 
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-name {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
 .front,
 .back {
   width: 100%;
@@ -415,8 +432,7 @@ body {
 }
 
 .front {
-  background-color: rgba(255, 255, 255, 0.12);
-  border: 1px solid #e95656;
+  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -473,7 +489,6 @@ body {
 }
 
 .job-offer-text2 a {
-  text-decoration: none;
   color: inherit;
   font-weight: bold;
 }
@@ -489,7 +504,8 @@ body {
   }
 
   .job-offer-part2 img {
-    width: 100%;
+    width: 90%;
+    display: flex;
   }
 }
 
@@ -531,7 +547,8 @@ h2,
 }
 
 .left-box p {
-  padding: 0 20%;
+  padding-left: 70px;
+  margin: 15px;
 }
 
 .right-box {
@@ -608,6 +625,7 @@ h2,
 .footer-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
 }
 
@@ -625,21 +643,21 @@ h2,
   transform: scale(1.02);
 }
 
-/* .footer-container p {
-  border-right: 1px white solid;
+.footer-container p {
   padding: 0 10px;
-} */
+}
 
-/* .link a {
+.footer-container a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-} */
+}
 
 @media only screen and (max-width: 1180px) {
   .footer-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-container button {
