@@ -39,7 +39,7 @@ const Contact = () => {
           <h2>Kontakt</h2>
           <h3>PEKÁRNA VĚTRNÝ JENÍKOV</h3>
           <p>
-            <img src={phoneIcon} alt="Phone icon" /> +420 775 771 030
+            <img src={phoneIcon} alt="Phone icon" /> +420 111 222 333
           </p>
           <p>
             <img src={emailIcon} alt="Email icon" /> pekarna@vetrnyjenikov.cz
@@ -49,7 +49,7 @@ const Contact = () => {
             588 42 Větrný Jeníkov, Česko
           </p>
           <p>
-          IČO: 29363870
+          IČO: 12312312
           </p>
           <p>
           DIČ: CZ12341234
