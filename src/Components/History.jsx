@@ -34,7 +34,7 @@ const History = () => {
       <div className="history-content">
         <div className="left-column" ref={leftColumnRef}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            <span className="first-word">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Proin
             elementum, felis a ultricies ultricies, tellus augue efficitur
             ligula, eget ornare tellus odio vel velit. Mauris vel scelerisque
             ante. Ut vitae felis dapibus, hendrerit lectus id, auctor urna.
@@ -55,7 +55,7 @@ const History = () => {
             <img src={HistoryImage} alt="History Image" />
           </div>
           <p ref={rightColumnRef}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            <span className="first-word">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Proin
             elementum, felis a ultricies ultricies, tellus augue efficitur
             ligula, eget ornare tellus odio vel velit. Mauris vel scelerisque
             ante. Ut vitae felis dapibus, hendrerit lectus id, auctor urna.

@@ -17,7 +17,6 @@ const Contact = () => {
       const rightBoxTop = rightBoxElement.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      // Checking if the elements are in the viewport
       if (leftBoxTop < windowHeight) {
         leftBoxElement.classList.add("fade-left");
       }

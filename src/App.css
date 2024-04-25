@@ -1,17 +1,16 @@
 /*   
 font-family: "Parisienne", cursive; Font pro jméno pekárny
 font-family: "Josefin Sans", sans-serif; Font pro nadpisy
-font-family: "Crimson Text", serif;
-font-family: "Aladin", system-ui; Font pro všechen text 
+font-family: "Crimson Text", serif; Font pro všechen text
+font-family: "Aladin", system-ui;  
 */
 body {
   background-image: url("./assets/pozadi.jpg");
   background-size: contain;
   background-position: center;
-  font-family: "Crimson Text", serif;
-  font-size: 20px;
-  min-width: 340px;
-  color: #ffffff;
+  font: 20px "Crimson Text", serif;
+  min-width: 320px;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -27,10 +26,9 @@ body {
   position: relative;
   background: none;
   border: none;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 22px;
+  font: 22px "Josefin Sans", sans-serif;
   padding: 20px;
 }
 
@@ -41,7 +39,7 @@ body {
 
 .navbar-links-container button:not(.dropdown-button)::after {
   position: absolute;
-  background-color: #ffffff;
+  background-color: #fff;
   content: "";
   left: 0;
   bottom: 10px;
@@ -92,29 +90,13 @@ body {
     text-decoration: none;
     width: 100vw;
     margin-top: 5px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #fff;
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
 
   .dropdown-content button:hover {
     background-color: #e95656;
   }
-}
-
-/* SCROLL TO THE TOP BUTTON */
-.scroll-to-top-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.scroll-to-top-button:hover {
-  background-color: #f09595;
 }
 
 /* HEADER */
@@ -142,13 +124,12 @@ body {
   position: absolute;
   top: 55%;
   left: 20%;
-  color: white;
+  color: #fff;
   text-decoration: none;
   transform: translate(-50%, -50%);
-  font-family: "Parisienne", cursive;
+  font: 38px "Parisienne", cursive;
   z-index: 1;
   line-height: 1;
-  font-size: 38px;
 }
 
 .large-text {
@@ -210,14 +191,13 @@ body {
 
 @media (max-width: 800px) {
   .about-container {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .about-container h2 {
     position: relative;
     margin: 0;
-    padding-top: 30px;
-    padding-bottom: 0;
+    padding: 20px 0 0 0;
   }
 
   .first-part,
@@ -269,7 +249,7 @@ body {
 /* HISTORY */
 .history-container {
   max-width: 1200px;
-  margin: 5rem auto;
+  margin: 3rem auto;
 }
 
 .history-content {
@@ -283,7 +263,7 @@ body {
 }
 
 .left-column {
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #fff;
   width: calc(33.33% - 0.5px);
   padding-right: 15px;
 }
@@ -325,68 +305,12 @@ body {
   }
 }
 
+.first-word {
+  font: 30px "Aladin", system-ui;
+}
+
+
 /* PRODUCTS */
-/* .boxes-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 22px;
-}
-
-.box {
-  width: 375px;
-  height: 200px;
-  margin: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid #e95656;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.modal {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 70vw;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-@media (max-width: 800px) {
-  .box {
-    width: 80%;
-  }
-}
-
-@media (max-width: 400px) {
-  .box {
-    display: flex;
-    flex-wrap: wrap;
-  }
-} */
-
 .boxes-container {
   display: flex;
   flex-wrap: wrap;
@@ -418,7 +342,6 @@ body {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
   font-size: 2rem;
   text-align: center;
 }
@@ -432,7 +355,7 @@ body {
 }
 
 .front {
-  border: 1px solid white;
+  border: 1px solid;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -440,12 +363,10 @@ body {
 
 .back {
   background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 5px;
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .box:hover {
@@ -535,9 +456,9 @@ body {
 h2,
 .contact-container h3 {
   font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
   display: flex;
   justify-content: center;
-  font-weight: 400;
 }
 
 .left-box {
@@ -547,8 +468,7 @@ h2,
 }
 
 .left-box p {
-  padding-left: 70px;
-  margin: 15px;
+  padding-left: 100px;
 }
 
 .right-box {
@@ -557,7 +477,7 @@ h2,
 }
 
 .right-box form {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .right-box form div {
@@ -584,7 +504,7 @@ h2,
 
 .right-box form button {
   background-color: #4caf50;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -592,11 +512,6 @@ h2,
 .right-box form button:hover {
   transform: scale(1.03);
   background-color: #70bd72;
-}
-
-.right-box h2 {
-  margin: 0;
-  padding-top: 20px;
 }
 
 .iframe-container {
@@ -632,7 +547,7 @@ h2,
 .footer-container button {
   background: none;
   border: none;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   margin-left: 10px;
   font-weight: bold;
@@ -649,20 +564,30 @@ h2,
 
 .footer-container a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-weight: bold;
 }
 
 @media only screen and (max-width: 1180px) {
   .footer-container {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
+}
 
-  .footer-container button {
-    margin-left: 0;
-  }
+/* SCROLL TO THE TOP BUTTON */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #f09595;
 }
 
 /* PAGES */
@@ -675,7 +600,5 @@ h2,
 }
 
 h1 {
-  font-family: "Josefin Sans", sans-serif;
   text-align: center;
-  font-weight: 400;
 }
