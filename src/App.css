@@ -34,7 +34,7 @@ body {
 
 .navbar button:hover:not(.dropdown-button, .dropdown-content button:hover),
 .box:hover {
-  transform: scale(1.06);
+  transform: scale(1.07);
   color: #f09595;
 }
 
@@ -59,7 +59,7 @@ body {
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .navbar-links-container button:not(.dropdown-button) {
     display: none;
   }
@@ -97,6 +97,7 @@ body {
 
   .dropdown-content button:hover {
     background-color: #e95656;
+    transform: scale(1.06);
     color: white;
   }
 }
@@ -372,6 +373,7 @@ body {
 
 .box:hover {
   transform: rotateY(180deg);
+  color: #fff;
 }
 
 @media (max-width: 800px) {

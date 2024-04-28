@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const CookiesPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="pages">
       <h1>Jaké soubory cookies používáme?</h1>

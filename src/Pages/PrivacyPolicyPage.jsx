@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   return (
     <div className="pages">
       <h1>Zásady zpracování osobních údajů</h1>
