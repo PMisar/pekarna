@@ -80,7 +80,7 @@ body {
 
   .dropdown-content {
     position: absolute;
-    background-color: #767272;
+    background-color: #626060;
     width: 100vw;
     z-index: 1;
     right: 0;
@@ -105,6 +105,7 @@ body {
 /* HEADER */
 .home-banner-container {
   position: relative;
+  height: 300px; 
 }
 
 .home-banner-container img {
@@ -140,6 +141,10 @@ body {
 }
 
 @media (max-width: 800px) {
+  .home-banner-container {
+    height: auto;
+  }
+  
   .home-banner-container img {
     height: 140px;
   }
@@ -437,10 +442,18 @@ body {
 .retailers-container {
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden; 
 }
 
+.retailers-container iframe {
+  height: 400px; 
+  border: none;
+}
+
+.retailers-container iframe,
 .retailers-container img {
   width: 100%;
+  display: block; 
 }
 
 /* CONTACT */
@@ -516,8 +529,7 @@ h2,
   justify-content: center;
 }
 
-.iframe-style,
-.retailers-container iframe {
+.iframe-style {
   max-width: 1200px;
   width: 100%;
   height: 400px;
