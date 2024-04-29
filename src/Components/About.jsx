@@ -37,10 +37,10 @@ const About = () => {
           In ac blandit lorem. Sed non imperdiet est. In vestibulum ligula sed
           purus convallis condimentum.
         </p>
-        <img className="img1" src={AboutImage2} alt="Holding Dough Image" />
+        <img className="img1" src={AboutImage2} alt="Falling Flour Image" />
       </div>
       <div className="second-part">
-        <img className="img2" src={AboutImage} alt="Falling Flour Image" />
+        <img className="img2" src={AboutImage} alt="Holding Dough Image" />
         <div className="background-rectangle">
           <p className="about-text" ref={secondPartRef}>
             Mauris convallis lacus ut arcu pellentesque, eget pellentesque

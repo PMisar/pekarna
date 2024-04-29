@@ -4,7 +4,6 @@ import BannerImage from "../assets/header-image.jpg";
 
 const Header = () => {
   return (
-    <>
       <div className="home-banner-container" id="header">
         <img src={BannerImage} alt="" />
         <Link to="/" className="header-text">
@@ -13,7 +12,6 @@ const Header = () => {
           <span className="small-text">Větrný Jeníkov</span>
         </Link>
       </div>
-    </>
   );
 };
 

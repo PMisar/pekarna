@@ -31,7 +31,6 @@ function App() {
 function AppContent() {
   const location = useLocation();
 
-  // Function to determine if Navbar should be hidden based on current route
   const shouldHideNavbar = () => {
     return (
       location.pathname === "/privacy-policy" ||

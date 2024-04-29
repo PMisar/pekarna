@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import chlebVelkyImage from "../assets/chlebvelky.png";
 import chlebMalyImage from "../assets/chlebmaly.png";
 import dalamanekImage from "../assets/dalamanek.jpg";
@@ -9,9 +9,6 @@ import kolac2Image from "../assets/kolac2.jpg";
 import vanockaImage from "../assets/vanocka.png";
 
 const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState("");
-  const [productDetails, setProductDetails] = useState("");
-
   const handleBoxHover = (productName) => {
     setSelectedProduct(productName);
     setProductDetails(productsData[productName]);
