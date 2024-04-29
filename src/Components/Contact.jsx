@@ -168,13 +168,13 @@ const Contact = () => {
           <h2>Kontakt</h2>
           <h3>PEKÁRNA VĚTRNÝ JENÍKOV</h3>
           <p>
-            <img src={phoneIcon} alt="Phone icon" /> +420 111 222 333
+            <img src={phoneIcon} alt="Ikona telefonu" /> +420 111 222 333
           </p>
           <p>
-            <img src={emailIcon} alt="Email icon" /> pekarna@vetrnyjenikov.cz
+            <img src={emailIcon} alt="Ikona obálky" /> pekarna@vetrnyjenikov.cz
           </p>
           <p>
-            <img src={locationIcon} alt="Location icon" /> Větrný Jeníkov 34,
+            <img src={locationIcon} alt="Ikona lokace" /> Větrný Jeníkov 34,
             588 42 Větrný Jeníkov, Česko
           </p>
           <p>IČO: 12312312</p>

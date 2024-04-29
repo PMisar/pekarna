@@ -67,7 +67,7 @@ const JobOffer = () => {
           </p>
         </div>
         <div className="right-image">
-          <img src={RollerImage} alt="Roller Image" />
+          <img src={RollerImage} alt="Obrázek setříděného pečiva v regále" />
         </div>
       </div>
     </div>

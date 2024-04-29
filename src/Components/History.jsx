@@ -52,7 +52,7 @@ const History = () => {
         </div>
         <div className="right-column">
           <div className="history-image">
-            <img src={HistoryImage} alt="History Image" />
+            <img src={HistoryImage} alt="Historická fotografie majitelů s pekárnou" />
           </div>
           <p ref={rightColumnRef}>
             <span className="first-word">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Proin

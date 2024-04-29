@@ -5,7 +5,7 @@ import BannerImage from "../assets/header-image.jpg";
 const Header = () => {
   return (
       <div className="home-banner-container" id="header">
-        <img src={BannerImage} alt="" />
+        <img src={BannerImage} alt="Obrázek čerstvého pečiva" />
         <Link to="/" className="header-text">
           <span className="large-text">Pekárna</span>
           <br />
