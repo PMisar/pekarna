@@ -40,7 +40,11 @@ const About = () => {
         <img className="img1" src={AboutImage} alt="Obrázek prosévání mouky" />
       </div>
       <div className="second-part">
-        <img className="img2" src={AboutImage2} alt="Obrázek rukou držících těsto" />
+        <img
+          className="img2"
+          src={AboutImage2}
+          alt="Obrázek rukou držících těsto"
+        />
         <div className="background-rectangle">
           <p className="about-text" ref={secondPartRef}>
             Mauris convallis lacus ut arcu pellentesque, eget pellentesque

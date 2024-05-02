@@ -417,11 +417,6 @@ body {
   display: flex;
 }
 
-.job-offer-text2 a {
-  color: inherit;
-  font-weight: bold;
-}
-
 .job-offer-part2 img {
   width: 400px;
   margin: 0 auto;
@@ -446,7 +441,7 @@ body {
 }
 
 .retailers-container iframe {
-  height: 400px;
+  height: 600px;
   border: none;
 }
 
@@ -479,6 +474,16 @@ h2,
 
 .left-box p {
   padding-left: 100px;
+}
+
+.phone-link, .email-link {
+  text-decoration: underline; 
+  color: #fff; 
+}
+
+.phone-link:hover, .email-link:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .right-box {
