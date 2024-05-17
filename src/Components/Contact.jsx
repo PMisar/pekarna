@@ -136,9 +136,9 @@ const Contact = () => {
               ></textarea>{" "}
             </div>
             <button type="submit">Odeslat</button>
-            <div id="reCaptcha-container"> 
+            {/* <div id="reCaptcha-container"> 
             <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} />
-            </div>
+            </div> */}
             <p style={{ fontSize: "18px", textAlign: "center" }}>
               Vložením osobních údajů souhlasíte s podmínkami ochrany osobních
               údajů.
