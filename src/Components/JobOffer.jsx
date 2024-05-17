@@ -59,8 +59,8 @@ const JobOffer = () => {
           <p>
             Pokud máte zájem připojit se k nám, zašlete nám svůj životopis a
             stručný dopis motivace na naši e-mailovou adresu:{" "}
-            <a href="mailto:pekarna@vetrnyjenikov.cz" className="email-link">
-              pekarna@vetrnyjenikov.cz
+            <a href="mailto:example@vetrnyjenikov.cz" className="email-link">
+              example@vetrnyjenikov.cz
             </a>
             . Těšíme se na setkání s vámi a na společné pečení chutných dobrot!
             🥖🍰

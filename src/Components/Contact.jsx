@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 import phoneIcon from "../assets/telefon.png";
 import emailIcon from "../assets/posta.png";
 import locationIcon from "../assets/adresa.png";
@@ -79,8 +80,8 @@ const Contact = () => {
           </p>
           <p>
             <img src={emailIcon} alt="Ikona obálky" />{" "}
-            <a href="mailto:pekarna@vetrnyjenikov.cz" className="email-link">
-              pekarna@vetrnyjenikov.cz
+            <a href="mailto:example@vetrnyjenikov.cz" className="email-link">
+              example@vetrnyjenikov.cz
             </a>
           </p>
           <p>
@@ -135,6 +136,9 @@ const Contact = () => {
               ></textarea>{" "}
             </div>
             <button type="submit">Odeslat</button>
+            <div id="reCaptcha-container"> 
+            <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} />
+            </div>
             <p style={{ fontSize: "18px", textAlign: "center" }}>
               Vložením osobních údajů souhlasíte s podmínkami ochrany osobních
               údajů.

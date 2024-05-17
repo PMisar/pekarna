@@ -541,6 +541,14 @@ h2,
   border: 0;
 }
 
+#reCaptcha-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 800px) {
   .contact-boxes {
     flex-direction: column;
