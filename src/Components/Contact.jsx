@@ -43,31 +43,31 @@ const Contact = () => {
         alert("reCAPTCHA validation failed!");
         return;
       }
-      alert("Form submission successful!");
+      handleEmailSend();
     } catch (error) {
       console.log(error);
     }
   }
 
-  // const handleFormSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await axios.post(
-  //       "http://localhost:5000/controllers/sendEmailController",
-  //       formData
-  //     );
-  //     alert("Email sent successfully!");
-  //     setFormData({
-  //       name: "",
-  //       email: "",
-  //       subject: "",
-  //       message: "",
-  //     });
-  //   } catch (error) {
-  //     console.error("Error sending email:", error);
-  //     alert("Error sending email. Please try again later.");
-  //   }
-  // };
+  async function handleEmailSend() {
+    try {
+      const resp = await axios.post(
+        `${import.meta.env.VITE_SERVER_URL}/email`,
+        formData
+      );
+      console.log(resp);
+      alert("Email sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Error sending email. Please try again later.");
+    }
+  }
 
   const handleScroll = () => {
     const leftBoxElement = leftBoxRef.current;
