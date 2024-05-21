@@ -6,6 +6,7 @@ import emailIcon from "../assets/posta.png";
 import locationIcon from "../assets/adresa.png";
 
 const Contact = () => {
+  const recaptcha = useRef(null);
   const leftBoxRef = useRef(null);
   const rightBoxRef = useRef(null);
   const [formData, setFormData] = useState({
@@ -23,13 +24,38 @@ const Contact = () => {
     }));
   };
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
+  async function submitForm(event) {
+    event.preventDefault();
+    const captchaValue = recaptcha.current.getValue();
+    if (!captchaValue) {
+      alert("Please verify the reCAPTCHA!");
+      return;
+    }
     try {
-      await axios.post(
-        "http://localhost:5000/controllers/sendEmailController",
+      const res = await axios.post(
+        `${import.meta.env.VITE_SERVER_URL}/gcaptcha`,
+        {
+          token: captchaValue,
+        }
+      );
+      console.log(res);
+      if (!res.data.success) {
+        alert("reCAPTCHA validation failed!");
+        return;
+      }
+      handleEmailSend();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function handleEmailSend() {
+    try {
+      const resp = await axios.post(
+        `${import.meta.env.VITE_SERVER_URL}/email`,
         formData
       );
+      console.log(resp);
       alert("Email sent successfully!");
       setFormData({
         name: "",
@@ -41,7 +67,7 @@ const Contact = () => {
       console.error("Error sending email:", error);
       alert("Error sending email. Please try again later.");
     }
-  };
+  }
 
   const handleScroll = () => {
     const leftBoxElement = leftBoxRef.current;
@@ -93,7 +119,7 @@ const Contact = () => {
         </div>
         <div className="right-box" ref={rightBoxRef}>
           <h2>Napište nám</h2>
-          <form onSubmit={handleFormSubmit}>
+          <form onSubmit={submitForm}>
             <div>
               <label htmlFor="name">Jméno:</label>
               <input
@@ -136,9 +162,12 @@ const Contact = () => {
               ></textarea>{" "}
             </div>
             <button type="submit">Odeslat</button>
-            {/* <div id="reCaptcha-container"> 
-            <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} />
-            </div> */}
+            <div id="reCaptcha-container">
+              <ReCAPTCHA
+                ref={recaptcha}
+                sitekey={import.meta.env.VITE_SITE_KEY}
+              />
+            </div>
             <p style={{ fontSize: "18px", textAlign: "center" }}>
               Vložením osobních údajů souhlasíte s podmínkami ochrany osobních
               údajů.
@@ -150,9 +179,9 @@ const Contact = () => {
         <iframe
           className="iframe-style"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2592.5127904506326!2d15.477510726404008!3d49.47481985712936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d1dad88204109%3A0xfae42dcc1541e14c!2zUGVrw6FybmEgVsSbdHJuw70gSmVuw61rb3Y!5e0!3m2!1scs!2sde!4v1712083585540!5m2!1scs!2sde"
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
     </div>
