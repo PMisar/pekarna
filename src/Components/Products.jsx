@@ -9,7 +9,7 @@ import kolac2Image from "../assets/kolac2.jpg";
 import vanockaImage from "../assets/vanocka.png";
 
 const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  // const [selectedProduct, setSelectedProduct] = useState(null);
   const handleBoxHover = (productName) => {
     setSelectedProduct(productName);
     setProductDetails(productsData[productName]);

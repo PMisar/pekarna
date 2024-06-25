@@ -28,7 +28,7 @@ const Contact = () => {
     event.preventDefault();
     const captchaValue = recaptcha.current.getValue();
     if (!captchaValue) {
-      alert("Please verify the reCAPTCHA!");
+      alert("Ověřte prosím reCAPTCHA!");
       return;
     }
     try {
@@ -40,7 +40,7 @@ const Contact = () => {
       );
       console.log(res);
       if (!res.data.success) {
-        alert("reCAPTCHA validation failed!");
+        alert("Ověření reCAPTCHA selhalo. Zkuste to prosím znovu.");
         return;
       }
       handleEmailSend();
@@ -49,25 +49,25 @@ const Contact = () => {
     }
   }
 
-  async function handleEmailSend() {
-    try {
-      const resp = await axios.post(
-        `${import.meta.env.VITE_SERVER_URL}/email`,
-        formData
-      );
-      console.log(resp);
-      alert("Email sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("Error sending email. Please try again later.");
-    }
-  }
+  // async function handleEmailSend() {
+  //   try {
+  //     const resp = await axios.post(
+  //       `${import.meta.env.VITE_SERVER_URL}/email`,
+  //       formData
+  //     );
+  //     console.log(resp);
+  //     alert("Email byl úspěšně odeslán.");
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       subject: "",
+  //       message: "",
+  //     });
+  //   } catch (error) {
+  //     console.error("Error sending email:", error);
+  //     alert("Chyba při odesílání emailu. Zkuste to prosím znovu později.");
+  //   }
+  // }
 
   const handleScroll = () => {
     const leftBoxElement = leftBoxRef.current;
@@ -114,8 +114,8 @@ const Contact = () => {
             <img src={locationIcon} alt="Ikona lokace" /> Větrný Jeníkov 34, 588
             42 Větrný Jeníkov, Česko
           </p>
-          <p>IČO: 12312312</p>
-          <p>DIČ: CZ12341234</p>
+          <p>IČO: 29363870</p>
+          <p>DIČ: CZ29363870</p>
         </div>
         <div className="right-box" ref={rightBoxRef}>
           <h2>Napište nám</h2>
@@ -162,12 +162,12 @@ const Contact = () => {
               ></textarea>{" "}
             </div>
             <button type="submit">Odeslat</button>
-            <div id="reCaptcha-container">
+            {/* <div id="reCaptcha-container">
               <ReCAPTCHA
                 ref={recaptcha}
                 sitekey={import.meta.env.VITE_SITE_KEY}
               />
-            </div>
+            </div> */}
             <p style={{ fontSize: "18px", textAlign: "center" }}>
               Vložením osobních údajů souhlasíte s podmínkami ochrany osobních
               údajů.
